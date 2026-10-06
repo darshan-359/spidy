@@ -54,7 +54,7 @@ export default function Home({ theme }) {
   return (
     <main>
       <section id="frame">
-        <ScrollExpand src="/spidy-frame.jpg" alt="Spider-Man mid-swing" title="SPIDY" scrollHint="Scroll" mediaZoom={1.12} scrollDistance={1.8} holdDistance={0.5} smoothing={0.3} useWindowScroll>
+        <ScrollExpand src="./spidy-frame.jpg" alt="Spider-Man mid-swing" title="SPIDY" scrollHint="Scroll" mediaZoom={1.12} scrollDistance={1.8} holdDistance={0.5} smoothing={0.3} useWindowScroll>
           <h2>Built different.</h2>
           <p>Meet the hero who never stops moving. Keep scrolling and swing into the city.</p>
           <button className="primary-btn" onClick={() => scrollTo('#top')}>ENTER THE WEB <span>downwards right arrow</span></button>
@@ -62,7 +62,7 @@ export default function Home({ theme }) {
       </section>
       <section className="hero" id="top">
         <div className="hero-video-wrap">
-          <video ref={videoRef} className="hero-video" src="/landing-scroll.mp4" muted playsInline preload="auto" />
+          <video ref={videoRef} className="hero-video" src="./landing-scroll.mp4" muted playsInline preload="auto" />
         </div>
         <div className="hero-vignette" />
         <div className="hero-grid" />

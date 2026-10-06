@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter, Routes, Route, NavLink, useLocation } from 'react-router-dom';
+import { HashRouter, Routes, Route, NavLink, useLocation } from 'react-router-dom';
 import Home from './pages/Home';
 import Story from './pages/Story';
 import Sense from './pages/Sense';
@@ -82,7 +82,7 @@ function LoginPage({ onClose }) {
       <button className="login-close" onClick={onClose} aria-label="Close login">X</button>
       <div className="login-card">
         <aside className="login-art">
-          <img src="/spidy-frame.jpg" alt="" />
+          <img src="./spidy-frame.jpg" alt="" />
           <svg className="login-web" viewBox="0 0 300 300" aria-hidden="true">
             {[0, 1, 2, 3, 4, 5].map((k) => <line key={k} x1="300" y1="0" x2={300 - Math.cos(k * 0.31) * 330} y2={Math.sin(k * 0.31) * 330} />)}
             {[50, 100, 150, 210].map((r) => <circle key={r} cx="300" cy="0" r={r} />)}
@@ -211,7 +211,7 @@ function App() {
 }
 
 createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
+  <HashRouter>
     <App />
-  </BrowserRouter>
+  </HashRouter>
 );
